@@ -65,7 +65,7 @@ void setup() {
   stepSizes = (float*)malloc(WIDTH);
   radii = (uint8_t*)malloc(WIDTH);
 
-  base = randomf(1.45f, 1.75f);
+  base = randomf(1.44f, 1.84f);
   stepScale = randomf(0.01f, 0.2f);
   stepOffset = randomf(0.01f, 0.4f);
   blurFactor = randomf(0.5f, 1.0f);
