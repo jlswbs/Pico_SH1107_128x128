@@ -65,7 +65,7 @@ void setup() {
   stepSizes = (float*)malloc(WIDTH);
   radii = (uint8_t*)malloc(WIDTH);
 
-  base = randomf(1.44f, 1.84f);
+  base = randomf(1.45f, 1.85f);
   stepScale = randomf(0.01f, 0.2f);
   stepOffset = randomf(0.01f, 0.4f);
   blurFactor = randomf(0.5f, 1.0f);
@@ -78,7 +78,7 @@ void setup() {
     radii[i] = radius;
     stepSizes[i] = logf(radius) * stepScale + stepOffset;  
   }
-    
+
   for (int i = 0; i < SCR; i++) grid[i] = randomf(-1.0f, 1.0f);
   
 }
@@ -143,8 +143,6 @@ void loop() {
 
   float smallest = MAXFLOAT;
   float largest = -MAXFLOAT;
-  float colmin = MAXFLOAT;
-  float colmax = -MAXFLOAT;
 
   for (int i = 0; i < SCR; i++) {
     float curStep = stepSizes[bestLevel[i]];
@@ -158,7 +156,6 @@ void loop() {
   }
 
   float range = (largest - smallest) / 2.0f;
-  float colrange = (colmax - colmin) / 2.0f;
 
   for (int y = 0; y < HEIGHT; y++){
 
