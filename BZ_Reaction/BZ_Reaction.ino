@@ -3,8 +3,8 @@
 #include "hardware/structs/rosc.h"
 #include "sh1107.h"
 
-#define WIDTH   64
-#define HEIGHT  64
+#define WIDTH   85
+#define HEIGHT  85
 #define SCR     (WIDTH * HEIGHT)
 #define SCL     2
 
@@ -93,8 +93,8 @@ void loop() {
       c[(x+y*WIDTH)+SCR*q] = constrain(c_c + c_c * (c_a - c_b), 0.0f, 1.0f);      
     
       uint8_t coll = 255.0f * a[(x+y*WIDTH)+SCR*q];
-      if(coll < 128) display.drawPixel(2*x, 2*y, BLACK);
-      else display.drawPixel(2*x, 2*y, WHITE);
+      if(coll < 128) display.drawPixel(1.5f*x, 1.5f*y, BLACK);
+      else display.drawPixel(1.5f*x, 1.5f*y, WHITE);
       
     }
   }

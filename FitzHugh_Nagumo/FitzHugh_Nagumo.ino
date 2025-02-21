@@ -3,8 +3,8 @@
 #include "hardware/structs/rosc.h"
 #include "sh1107.h"
 
-#define WIDTH   64
-#define HEIGHT  64
+#define WIDTH   85
+#define HEIGHT  85
 #define SCR     (WIDTH * HEIGHT)
 
 SH1107 display;
@@ -156,8 +156,8 @@ void loop() {
     for (int x = 0; x < WIDTH; x++){
   
       uint8_t coll = 255.0f * gridU[x+y*WIDTH];
-      if(coll < 96) display.drawPixel(2*x, 2*y, WHITE);
-      else display.drawPixel(2*x, 2*y, BLACK);
+      if(coll < 96) display.drawPixel(1.5f*x, 1.5f*y, WHITE);
+      else display.drawPixel(1.5f*x, 1.5f*y, BLACK);
       
     }
 
