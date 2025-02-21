@@ -75,11 +75,6 @@ void setup() {
   dU = (float*)malloc(4*SCR);
   dV = (float*)malloc(4*SCR);
 
-  memset(gridU, 0, 4*SCR);
-  memset(gridV, 0, 4*SCR);
-  memset(dU, 0, 4*SCR);
-  memset(dV, 0, 4*SCR);
-
   diffU = randomf(0.0999f, 0.1999f);
   diffV = randomf(0.0749f, 0.0849f);
   paramF = randomf(0.0299f, 0.0399f);
