@@ -49,8 +49,12 @@ void setup() {
   memset(v, 0, 4*SCR);
 
   a = randomf(-0.25f, 0.25f);
+  float seed = randomf(-TWO_PI, TWO_PI);
 
-  v[(WIDTH/2)+(HEIGHT/2)*WIDTH] = randomf(-TWO_PI, TWO_PI);
+  v[(WIDTH/2)+(HEIGHT/2)*WIDTH] = seed;
+  v[(WIDTH/2)+((HEIGHT/2)-1)*WIDTH] = seed;
+  v[((WIDTH/2)-1)+((HEIGHT/2)-1)*WIDTH] = seed;
+  v[((WIDTH/2)-1)+(HEIGHT/2)*WIDTH] = seed;
 
 }
 
